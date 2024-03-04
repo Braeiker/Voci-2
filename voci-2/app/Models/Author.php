@@ -10,10 +10,12 @@ class Author extends Model
 {
     use HasFactory;
 
+    // Specify fillable attributes to allow mass assignment
     protected $fillable = [
         'name', 'surname'
     ];
 
+    // Define a relationship with the Post model
     public function posts()
     {
         return $this->hasMany(Post::class);
