@@ -1,66 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Voci Media API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Questo progetto consiste in un sistema di API RESTful per gestire una libreria di risorse multimediali per Voci, un media brand dedicato a dare voce alle donne.
 
-## About Laravel
+## Requisiti
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- PHP
+- Composer
+- Laravel
+- MySQL
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Installazione
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Clona il repository:
 
-## Learning Laravel
+   ```bash
+   git clone <url-del-tuo-repository.git>
+Vai nella directory del progetto:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+bash
+Copy code
+cd voci-media-api
+Installa le dipendenze:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+bash
+Copy code
+composer install
+Copia il file di configurazione .env:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+bash
+Copy code
+cp .env.example .env
+E modifica le variabili d'ambiente secondo le tue esigenze, in particolare le impostazioni del database.
 
-## Laravel Sponsors
+Genera la chiave dell'applicazione:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+bash
+Copy code
+php artisan key:generate
+Esegui le migrazioni del database:
 
-### Premium Partners
+bash
+Copy code
+php artisan migrate
+Assicurati di eseguire il file migrations.sql nel tuo database per creare la struttura necessaria.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+API Endpoints
+Tipologie di Media
+GET /api/media-types: Restituisce tutte le tipologie di media disponibili.
+POST /api/media-types: Crea una nuova tipologia di media.
+PUT /api/media-types/{id}: Modifica una tipologia di media esistente.
+DELETE /api/media-types/{id}: Cancella una tipologia di media.
+Autrici
+GET /api/authors: Restituisce tutte le autrici disponibili.
+POST /api/authors: Crea una nuova autrice.
+PUT /api/authors/{id}: Modifica un'autrice esistente.
+DELETE /api/authors/{id}: Cancella un'autrice.
+Contenuti Multimediali
+GET /api/media-content: Restituisce tutti i contenuti multimediali disponibili.
+POST /api/media-content: Crea un nuovo contenuto multimediale.
+PUT /api/media-content/{id}: Modifica un contenuto multimediale esistente.
+DELETE /api/media-content/{id}: Cancella un contenuto multimediale.
+Filtri
+GET /api/media-content/filter: Restituisce i contenuti multimediali filtrati per autrice e nome del contenuto.
+Contributi
+Se desideri contribuire, segui questi passaggi:
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Forka il repository
+Crea un nuovo branch (git checkout -b feature/nuova-funzionalita)
+Fai commit delle tue modifiche (git commit -m 'Aggiunta nuova funzionalità')
+Fai push del branch (git push origin feature/nuova-funzionalita)
+Apri una Pull Request
