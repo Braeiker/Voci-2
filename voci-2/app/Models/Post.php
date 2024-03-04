@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Author;
 use App\Models\Media;
-use Illuminate\Support\Facades\DB;
 
 class Post extends Model
 {
@@ -29,7 +28,7 @@ class Post extends Model
                 ->orWhere('authors.name', 'like', '%' . $search . '%')
                 ->orWhere('authors.surname', 'like', '%' . $search . '%')
                 ->orWhere('media.category', 'like', '%' . $search . '%')
-                ->orWhere('media.description', 'like', '%' . $search . '%');
+                ->orWhere('media.description', 'like', '%' . $search . '%')
         );
     }
 

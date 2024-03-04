@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Api\APIctrl;
+namespace App\Http\Controllers\Api\Ctrl;
 
 use Illuminate\Validation\Rule;
 use App\Models\Author;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\APIctrl\AuthorsResource;
-use App\Http\Resources\APIctrl\AuthorsCollection;
-use App\Filters\APIctrl\AuthorsFilter;
-use App\Http\Controllers\Api\APIctrl\ResponseController;
+use App\Http\Resources\Ctrl\AuthorsResource;
+use App\Http\Resources\Ctrl\AuthorsCollection;
+use App\Filters\Ctrl\AuthorsFilter;
+use App\Http\Controllers\Api\Ctrl\ResponseController;
 use Illuminate\Support\Facades\Validator;
 
 class AuthorsController extends Controller

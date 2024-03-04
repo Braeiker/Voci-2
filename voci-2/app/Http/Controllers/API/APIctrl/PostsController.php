@@ -1,15 +1,15 @@
 <?php
 
 
-namespace App\Http\Controllers\Api\APIctrl;
+namespace App\Http\Controllers\Api\Ctrl;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\APIctrl\PostsResource;
-use App\Http\Resources\APIctrl\PostsCollection;
-use App\Filters\APIctrl\PostsFilter;
-use App\Http\Controllers\Api\APIctrl\ResponseController;
+use App\Http\Resources\Ctrl\PostsResource;
+use App\Http\Resources\Ctrl\PostsCollection;
+use App\Filters\Ctrl\PostsFilter;
+use App\Http\Controllers\Api\Ctrl\ResponseController;
 use Illuminate\Support\Facades\Validator;
 
 

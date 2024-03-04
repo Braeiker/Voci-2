@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filters\APIctrl;
+namespace App\Filters\Ctrl;
 
 use App\Filters\ApiFilter;
 

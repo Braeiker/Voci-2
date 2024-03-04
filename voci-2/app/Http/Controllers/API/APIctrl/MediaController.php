@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Api\APIctrl;
+namespace App\Http\Controllers\Api\Ctrl;
 
 use App\Models\Media;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\APIctrl\MediaResource;
-use App\Http\Resources\APIctrl\MediaCollection;
-use App\Filters\APIctrl\MediaFilter;
+use App\Http\Resources\Ctrl\MediaResource;
+use App\Http\Resources\Ctrl\MediaCollection;
+use App\Filters\Ctrl\MediaFilter;
 use Illuminate\Support\Facades\Validator;
 
 class MediaController extends Controller
